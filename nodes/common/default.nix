@@ -22,28 +22,10 @@
     memoryPercent = 60;
   };
 
-  hardware.bluetooth = {
-    enable = true;
-    settings = {
-      General = {
-        Name = "mdsp-note";
-        DiscoverableTimeout = 0;
-        AlwaysPairable = true;
-        FastConnectable = true;
-      };
-
-      Policy = {
-        AutoEnable = true;
-        ReconnectAttempts = 5;
-        ReconnectIntervals = "1,2,4,8,16";
-      };
-    };
-  };
-
   environment = {
     variables = {
       EDITOR = "nvim";
-      TERMINAL = "kitty";
+      TERMINAL = "alacritty";
       GC_INITIAL_HEAP_SIZE = "32M";
     };
     systemPackages = with pkgs; [

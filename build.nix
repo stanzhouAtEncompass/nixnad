@@ -5,7 +5,7 @@ let
 in builtins.attrValues {
   inherit (pkgs) discord neovim;
   inherit (flake.outputs.nixosConfigurations)
-    acer-nix
+    k6-nix
     bootstrap
   ;
   inherit (flake.outputs.homeConfigurations) main;

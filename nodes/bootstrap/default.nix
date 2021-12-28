@@ -5,7 +5,7 @@ with global;
 {
   i18n.defaultLocale = "en_CA.UTF-8";
   console.useXkbConfig = true;
-  time.timeZone = "America/Sao_Paulo";
+  time.timeZone = "Australia/Sydney";
 
   fonts.fonts = with pkgs; [
     cantarell-fonts

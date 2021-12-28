@@ -5,12 +5,12 @@ Config { font    = "xft:JetBrainsMono Nerd Font Mono:pixelsize=14:antialias=true
        , hideOnStart = False
        , allDesktops = True
        , persistent = True
-       , iconRoot = "/home/matdsoupe/documents/privy/nixnad/home/modules/xmobar/xpm"
+       , iconRoot = "/home/szhou/documents/privy/nixnad/home/modules/xmobar/xpm"
        , commands = [ 
                       -- Time and date
                       Run Date " %b %d %Y - (%H:%M)" "date" 50
                       -- Network up and down
-                    , Run Com "/home/matdsoupe/scripts/network" [] "network" 30
+                    , Run Com "/home/szhou/scripts/network" [] "network" 30
                       -- Cpu usage in percent
                     , Run Cpu ["-t", " cpu: (<total>%)","-H","50","--high","red"] 20
                       -- Ram used number and percent

@@ -49,9 +49,9 @@
     };
 
     global = rec {
-      username = "matdsoupe";
-      email = "matheus_pessanha2001@outlook.com";
-      selected-desktop-environment = "gnome";
+      username = "szhou";
+      email = "stan.osaka@gmail.com";
+      selected-desktop-environment = "xmonad";
       rootPath = builtins.toString ./.;
       rooPathNix = rootPath;
       environmentShell = ''
@@ -122,8 +122,8 @@
     };
 
     nixosConfigurations = {
-      acer-nix = nixos-config {
-        main-module = ./nodes/acer-nix;
+      k6-nix = nixos-config {
+        main-module = ./nodes/k6-nix;
       };
       bootstrap = nixos-config {
         main-module = ./nodes/bootstrap;

@@ -34,15 +34,15 @@ in {
     };
   };
 
-#   services = {
-#     clipmenu.enable = true;
-#     udiskie = {
-#       enable = true;
-#       automount = true;
-#       notify = true;
-#     };
-#   };
-# 
+  services = {
+    clipmenu.enable = true;
+    udiskie = {
+      enable = true;
+      automount = true;
+      notify = true;
+    };
+  };
+
   home.packages = with pkgs; [
     # bar
     # haskellPackages.xmobar
@@ -59,7 +59,7 @@ in {
     onlyoffice-bin
 
     # dev
-    agda
+#    agda
 
     # tools
     beekeeper-studio
@@ -71,11 +71,11 @@ in {
     exodus
     earthly
     awscli2
-    ngrok
+#    ngrok
     flyctl
     gcolor3
     t-rec
-    heroku
+#    heroku
 
     # audio
     spotify

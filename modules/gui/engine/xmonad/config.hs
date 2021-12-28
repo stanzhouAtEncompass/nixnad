@@ -62,7 +62,7 @@ myModMask :: KeyMask
 myModMask = mod4Mask      -- Sets modKey to command/super key
 
 myTerminal :: String
-myTerminal = "kitty"  -- Sets default terminal
+myTerminal = "alacritty"  -- Sets default terminal
 
 myBrowser :: String
 myBrowser = "google-chrome-stable" -- Sets edge for tree select

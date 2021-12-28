@@ -14,8 +14,8 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
       - uses: cachix/cachix-action@v8
         with:
-          name: matdsoupe
+          name: stanosaka
           authToken: '${{ secrets.CACHIX_TOKEN }}'
-      - run: nix-shell -p nixFlakes --run 'nix-build build.nix' | cachix push matdsoupe
-      - run: nix-shell -p nixFlakes --run 'nix build .#nixosConfigurations.acer-nix.config.system.build.toplevel --experimental-features "nix-command flakes"' | cachix push matdsoupe
-      - run: nix-shell -p nixFlakes --run 'nix build .#nixosConfigurations.vps.config.system.build.toplevel --experimental-features "nix-command flakes"' | cachix push matdsoupe
+      - run: nix-shell -p nixFlakes --run 'nix-build build.nix' | cachix push stanosaka
+      - run: nix-shell -p nixFlakes --run 'nix build .#nixosConfigurations.k6-nix.config.system.build.toplevel --experimental-features "nix-command flakes"' | cachix push stanosaka
+      - run: nix-shell -p nixFlakes --run 'nix build .#nixosConfigurations.vps.config.system.build.toplevel --experimental-features "nix-command flakes"' | cachix push stanosaka

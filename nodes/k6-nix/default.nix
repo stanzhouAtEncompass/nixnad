@@ -1,7 +1,7 @@
 { global, pkgs, ... }:
 
 let
-  hostname = "acer-nix";
+  hostname = "k6-nix";
 in
 {
   imports = [
@@ -20,8 +20,8 @@ in
 
   location = {
     provider = "manual";
-    latitude = -21.7629877;
-    longitude = -41.296212;
+    latitude = -33.8718;
+    longitude = 151.2494;
   };
 
   xdg.portal = {
@@ -41,9 +41,9 @@ in
     dbus.enable = true;
 
     openvpn.servers = {
-      solfacilVPN = {
+      homeVPN = {
         autoStart = false;
-        config = "config /etc/openvpn/matheus.ovpn";
+        config = "config /etc/openvpn/au_sydney.ovpn";
       };
     };
 
@@ -106,15 +106,6 @@ in
       };
     };
 
-    # Bluetooth tool
-    blueman.enable = true;
-
-    # Enable CUPS to print documents.
-    printing = {
-      enable = true;
-      drivers = [ pkgs.hplipWithPlugin ];
-    };
-
     redshift = {
       enable = true;
       brightness = {
@@ -169,5 +160,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.03"; # Did you read the comment?
+  system.stateVersion = "21.05"; # Did you read the comment?
 }
