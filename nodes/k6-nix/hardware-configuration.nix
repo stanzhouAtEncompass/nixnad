@@ -5,29 +5,29 @@
 
 {
   imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
+    [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    {
-      device = "/dev/disk/by-uuid/fa9faaf3-53a3-4089-812c-710adc959e4b";
-      fsType = "btrfs";
-      options = [ "subvol=system" ];
+    { device = "/dev/disk/by-uuid/9ee318c4-e94f-45f4-8e67-14d5aca43b7e";
+      fsType = "ext4";
     };
 
-  fileSystems."/boot/efi" =
-    {
-      device = "/dev/disk/by-uuid/83FB-9CE3";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/0AAD-D8F2";
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/e0e882ba-a650-4941-8bd8-4f77d129bb3d"; }
+    ];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  # high-resolution display
+  hardware.video.hidpi.enable = lib.mkDefault true;
 }
