@@ -13,8 +13,7 @@ in
   networking = {
     hostName = hostname;
     useDHCP = false;
-    interfaces.enp4s0.useDHCP = true;
-    interfaces.wlp0s20f3.useDHCP = true;
+    interfaces.enp6s0.useDHCP = true;
     networkmanager.enable = true;
   };
 

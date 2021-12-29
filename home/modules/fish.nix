@@ -47,7 +47,7 @@ let
     function __direnv_export_eval --on-event fish_prompt;
         begin;
             begin;
-                "/etc/profiles/per-user/matdsoupe/bin/direnv" export fish
+                "/etc/profiles/per-user/szhou/bin/direnv" export fish
             end 1>| source
         end 2>| egrep -v -e "^direnv: export"
     end;

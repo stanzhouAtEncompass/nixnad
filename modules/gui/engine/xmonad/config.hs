@@ -273,8 +273,8 @@ myKeys cfg =
        , ("M-c", safeSpawnProg "clipmenu")
        , ("M-s", safeSpawnProg "screenkey")
        , ("M-S-s", safeSpawn "killall" ["screenkey"])
-       , ("M-S-p", safeSpawn "flameshot" ["gui", "-p", "/home/matdsoupe/pics/screenshots/"])
-       , ("M-C-p", safeSpawn "flameshot" ["screen", "-p", "/home/matdsoupe/pics/screenshots/"])
+       , ("M-S-p", safeSpawn "flameshot" ["gui", "-p", "/home/szhou/pics/screenshots/"])
+       , ("M-C-p", safeSpawn "flameshot" ["screen", "-p", "/home/szhou/pics/screenshots/"])
        
     --- System
        , ("M-x", safeSpawnProg "reboot")
