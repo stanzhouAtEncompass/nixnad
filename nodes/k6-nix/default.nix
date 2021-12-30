@@ -10,10 +10,21 @@ in
     ../../modules/gui/system.nix
   ];
 
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   networking = {
     hostName = hostname;
+    domain = "local.cwzhou.win"
     useDHCP = false;
-    interfaces.enp6s0.useDHCP = true;
+    dhcpcd.enable = false;
+    interfaces.enp6s0.ipv4.addresses = [{
+        address = "192.168.199.19";
+        prefixLength = 28;
+      }];
+    defaultGateway = "192.168.199.1";
+    nameservers = [ "192.168.199.20" "192.168.199.8" ];
     networkmanager.enable = true;
   };
 

@@ -10,10 +10,10 @@ in {
     ./modules/git.nix
     ./modules/dots.nix
     ./modules/fish.nix
-    # ./modules/dunst.nix
+    ./modules/dunst.nix
     ./modules/kitty.nix
     ./modules/starship.nix
-    # ./modules/autorandr.nix
+    ./modules/autorandr.nix
     ./modules/alacritty.nix
     "${emacsmat}/emacsmat.nix"
   ];
@@ -104,5 +104,5 @@ in {
     emacs-all-the-icons-fonts
   ];
 
-  # home.stateVersion = "21.05";
+  home.stateVersion = "21.05";
 }
