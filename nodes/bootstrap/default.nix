@@ -23,7 +23,7 @@ with global;
   ];
 
   programs = {
-    steam.enable = true;
+    #steam.enable = true;
     command-not-found.enable = true;
     gnupg.agent = {
       enable = true;

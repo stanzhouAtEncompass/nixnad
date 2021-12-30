@@ -16,7 +16,7 @@ in
 
   networking = {
     hostName = hostname;
-    domain = "local.cwzhou.win"
+    domain = "local.cwzhou.win";
     useDHCP = false;
     dhcpcd.enable = false;
     interfaces.enp6s0.ipv4.addresses = [{

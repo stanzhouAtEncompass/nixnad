@@ -74,7 +74,7 @@
       xclip
 
       # games
-      steamcmd
+      #steamcmd
 
       # gnome stuff
       gnome.gnome-tweaks
